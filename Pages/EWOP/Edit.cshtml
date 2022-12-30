@@ -1,0 +1,65 @@
+﻿@page
+@model Ewop2.Pages.EWOP.EditModel
+@{
+}
+<br>
+<h2>Edit Event</h2>
+
+@if (Model.errorMessage.Length > 0)
+{
+    <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+        <strong>@Model.errorMessage</strong>
+        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+    </div>
+}
+
+<form method="POST">
+    <input type="hidden" name="id" value="@Model.ewopinfo.EventId" >
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Event Date</label>
+        <div class="col-sm-6">
+            <input type="date" class="form-control" name="date"  value="@Model.ewopinfo.CalDate">
+        </div>
+    </div><div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Event Dyno</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="dyno" value="@Model.ewopinfo.EventDyno">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Event Info 1</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="info1" value="@Model.ewopinfo.EventInfo1">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Event Info 2</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="info2" value="@Model.ewopinfo.EventInfo2">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Event Info 3</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="info3" value="@Model.ewopinfo.EventInfo3">
+        </div>
+    </div>
+
+    @if (Model.successMessage.Length > 0)
+    {
+        <div class='alert alert-success alert-dismissible fade show' role='alert'>
+            <strong>@Model.successMessage</strong>
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+        </div>
+    }
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,75 @@
+﻿@page
+@model Ewop2.Pages.EWOP.Cal1Model
+@{
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" >
+</head>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <td colspan="7" align="center"><h1>January</h1></td>
+        </tr>
+        <tr>
+            <td width="14%"><h2>Sunday</h2></td>
+            <td width="14%"><h2>Monday</h2></td>
+            <td width="14%"><h2>Tuesday</h2></td>
+            <td width="14%"><h2>Wednesday</h2></td>
+            <td width="14%"><h2>Thursday</h2></td>
+            <td width="14%"><h2>Friday</h2></td>
+            <td><h2>Saturday</h2></td>
+            
+        </tr>
+    </thead>
+
+    <tbody>
+        
+         @for(var week=1; week < 7; week++)
+            {
+            <tr>
+                
+                @for (var day = 1; day < 8; day++)
+                    {
+                    <td width="14%">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td><h3>
+                                    @day-@week
+                                    </h3></td>
+                                </tr>
+                        
+                                <tr>
+                                    <td><h4>
+                                     @day SN
+                                    </h4></td>
+                                </tr>
+                                <tr>
+                                     <td>
+                                     @day Info 1
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <td>
+                                     @day Info 2
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <td>
+                                     @day Info 3
+                                     </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                }<!-- For each day-->
+                
+            </tr>
+        } <!-- For each week-->
+    </tbody>
+</table>
+
+

@@ -1,0 +1,161 @@
+﻿@page
+@model Ewop2.Pages.EWOP.EventsModel
+@{
+}
+
+<h2>List of Events</h2>
+<br />
+<a class='btn btn-primary btn-sm' href='/Ewop/Create'>New Event</a>
+<a class='btn btn-primary btn-sm' href='/Ewop/Create'>Update Calendar</a>
+
+
+<table class="table">
+
+    <tbody>
+        <tr><td><h2>Calendar 1</h2></td></tr>
+        <tr>
+            <td>
+                <table>
+                   <thead>
+                       <tr>
+                           <th width="14%">Event Id</th>
+                           <th width="14%">Event Date</th>
+                           <th width="14%">Event Dyno</th>
+                           <th width="14%">Event Info 1</th>
+                           <th width="14%">Event Info 2</th>
+                           <th width="14%">Event Info 3</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       @foreach(var item in Model.EventList0 )
+
+                       {                                    
+                       <tr>
+                
+                            <td width="14%">@item.EventId</td>
+                            <td width="14%">@item.CalDate</td>
+                            <td width="14%">@item.EventDyno</td>
+                            <td width="14%">@item.EventInfo1</td>
+                            <td width="14%">@item.EventInfo2</td>
+                            <td width="14%">@item.EventInfo3</td>
+                            <td width="14%">
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
+                            <td/>
+                       </tr>
+                        
+                       }
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr><td><h2>Calendar 2</h2></td></tr>
+        <tr>
+            
+            <td>
+                <table>
+
+                    @foreach (var item in Model.EventList1)
+
+                    {
+                    <tr>
+
+                        <td width="14%">@item.EventId</td>
+                        <td width="14%">@item.CalDate</td>
+                        <td width="14%">@item.EventDyno</td>
+                        <td width="14%">@item.EventInfo1</td>
+                        <td width="14%">@item.EventInfo2</td>
+                        <td width="14%">@item.EventInfo3</td>
+                        <td width="14%">
+                            <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
+                            <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
+                        <td/>
+                    </tr>
+                    }
+         
+
+                </table>
+            </td>
+        </tr>
+        <tr><td><h2>Calendar 3</h2></td></tr>
+        <tr>
+            <td>
+                <table>
+
+
+                    @foreach (var item in Model.EventList2)
+
+                    {
+            
+                        <tr>
+
+                            <td width="14%">@item.EventId</td>
+                            <td width="14%">@item.CalDate</td>
+                            <td width="14%">@item.EventDyno</td>            
+                            <td width="14%">@item.EventInfo1</td>
+                            <td width="14%">@item.EventInfo2</td>
+                            <td width="14%">@item.EventInfo3</td>
+                            <td width="14%">
+                                    <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
+                                    <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
+                            <td/>
+                        </tr>
+                    }
+
+                </table>
+            </td>
+        </tr>
+        <tr><td><h2>Future</h2></td></tr>
+        <tr>
+            <td>
+                <table>
+
+                    @foreach (var item in Model.EventList3)
+
+                    {
+                        <tr>
+
+                            <td width="14%">@item.EventId</td>
+                            <td width="14%">@item.CalDate</td>
+                            <td width="14%">@item.EventDyno</td>
+                            <td width="14%">@item.EventInfo1</td>
+                            <td width="14%">@item.EventInfo2</td>
+                            <td width="14%">@item.EventInfo3</td>
+                            <td width="14%">
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
+                            <td/>
+                        </tr>
+                    }
+                </table>
+            </td>
+        </tr>
+        <tr><td><h2>Past</h2></td></tr>
+        <tr>
+            <td>
+                <table> 
+                    @foreach (var item in Model.EventList4)
+
+                    {
+            
+                        <tr>
+
+                            <td width="14%">@item.EventId</td>
+                            <td width="14%">@item.CalDate</td>
+                            <td width="14%">@item.EventDyno</td>
+                            <td width="14%">@item.EventInfo1</td>
+                            <td width="14%">@item.EventInfo2</td>
+                            <td width="14%">@item.EventInfo3</td>
+                            <td width="14%">
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
+                            <td />
+                        </tr>
+                    }
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
