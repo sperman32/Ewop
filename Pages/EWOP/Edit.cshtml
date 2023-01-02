@@ -2,7 +2,7 @@
 @model Ewop2.Pages.EWOP.EditModel
 @{
 }
-<br>
+
 <h2>Edit Event</h2>
 
 @if (Model.errorMessage.Length > 0)
@@ -18,7 +18,7 @@
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Event Date</label>
         <div class="col-sm-6">
-            <input type="date" class="form-control" name="date"  value="@Model.ewopinfo.CalDate">
+            <input type="date" class="form-control" name="date" value="@Model.ewopinfo.CalDate">
         </div>
     </div><div class="row mb-3">
         <label class="col-sm-3 col-form-label">Event Dyno</label>

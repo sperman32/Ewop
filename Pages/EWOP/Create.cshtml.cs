@@ -23,6 +23,7 @@ namespace Ewop2.Pages.EWOP
             ewopinfo.EventInfo1 = Request.Form["info1"];
             ewopinfo.EventInfo2 = Request.Form["info2"];
             ewopinfo.EventInfo3 = Request.Form["info3"];
+           
 
             ewopinfo.EventYear = Convert.ToInt32(ewopinfo.CalDate.Substring(0, 4));
             ewopinfo.EventMonth = Convert.ToInt32(ewopinfo.CalDate.Substring(5, 2));
@@ -43,7 +44,7 @@ namespace Ewop2.Pages.EWOP
                     connection.Open();
                     String sql = "INSERT INTO Schedule " +
                         "(EventDyno, EventInfo1, EventInfo2, EventInfo3, EventYear, EventMonth, EventDay) VALUES " +
-                        "(@dyno, @info1, @info2, @info3, ewopinfo.EventYear, ewopinfo.EventMonth, ewopinfo.EventDay);";
+                        "(@dyno, @info1, @info2, @info3, @eventYear, @eventMonth, @eventDay);";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
@@ -51,9 +52,9 @@ namespace Ewop2.Pages.EWOP
                         command.Parameters.AddWithValue("@info1", ewopinfo.EventInfo1);
                         command.Parameters.AddWithValue("@info2", ewopinfo.EventInfo2);
                         command.Parameters.AddWithValue("@info3", ewopinfo.EventInfo3);
-                        command.Parameters.AddWithValue("ewopinfo.EventYear", ewopinfo.EventYear);
-                        command.Parameters.AddWithValue("ewopinfo.EventMonth", ewopinfo.EventMonth);
-                        command.Parameters.AddWithValue("ewopinfo.EventDay", ewopinfo.EventDay);
+                        command.Parameters.AddWithValue("@eventYear", ewopinfo.EventYear);
+                        command.Parameters.AddWithValue("@eventMonth", ewopinfo.EventMonth);
+                        command.Parameters.AddWithValue("@eventDay", ewopinfo.EventDay);
 
                         command.ExecuteNonQuery();
                     }
@@ -69,7 +70,7 @@ namespace Ewop2.Pages.EWOP
 
 
 
-            ewopinfo.EventDate = ""; ewopinfo.EventDyno = ""; ewopinfo.EventInfo1 = ""; ewopinfo.EventInfo2 = ""; ewopinfo.EventInfo3 = "";
+            ewopinfo.CalDate = ""; ewopinfo.EventDyno = ""; ewopinfo.EventInfo1 = ""; ewopinfo.EventInfo2 = ""; ewopinfo.EventInfo3 = ""; ewopinfo.EventYear = 1990; ewopinfo.EventMonth = 1; ewopinfo.EventDay = 1;
             successMessage = "New Event Added Successfully";
 
             Response.Redirect("/EWOP/Events");

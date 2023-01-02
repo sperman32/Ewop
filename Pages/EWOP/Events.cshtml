@@ -4,7 +4,6 @@
 }
 
 <h2>List of Events</h2>
-<br />
 <a class='btn btn-primary btn-sm' href='/Ewop/Create'>New Event</a>
 <a class='btn btn-primary btn-sm' href='/Ewop/Create'>Update Calendar</a>
 
@@ -27,10 +26,10 @@
                        </tr>
                    </thead>
                    <tbody>
-                       @foreach(var item in Model.EventList0 )
+                        @foreach(var item in Model.EventList0 )
 
-                       {                                    
-                       <tr>
+                        {                                    
+                        <tr>
                 
                             <td width="14%">@item.EventId</td>
                             <td width="14%">@item.CalDate</td>
@@ -42,9 +41,27 @@
                                 <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
                                 <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
                             <td/>
-                       </tr>
+                        </tr>
                         
-                       }
+                        }
+                        @foreach (var item in Model.EventList1)
+
+                        {
+                            <tr>
+
+                                <td width="14%">@item.EventId</td>
+                                <td width="14%">@item.CalDate</td>
+                                <td width="14%">@item.EventDyno</td>
+                                <td width="14%">@item.EventInfo1</td>
+                                <td width="14%">@item.EventInfo2</td>
+                                <td width="14%">@item.EventInfo3</td>
+                                <td width="14%">
+                                    <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
+                                    <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
+                                <td />
+                            </tr>
+
+                        }
                     </tbody>
                 </table>
             </td>
@@ -55,24 +72,43 @@
             <td>
                 <table>
 
-                    @foreach (var item in Model.EventList1)
+                    @foreach (var item in Model.EventList2)
 
                     {
-                    <tr>
+                        <tr>
 
-                        <td width="14%">@item.EventId</td>
-                        <td width="14%">@item.CalDate</td>
-                        <td width="14%">@item.EventDyno</td>
-                        <td width="14%">@item.EventInfo1</td>
-                        <td width="14%">@item.EventInfo2</td>
-                        <td width="14%">@item.EventInfo3</td>
-                        <td width="14%">
-                            <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
-                            <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
-                        <td/>
-                    </tr>
+                            <td width="14%">@item.EventId</td>
+                            <td width="14%">@item.CalDate</td>
+                            <td width="14%">@item.EventDyno</td>
+                            <td width="14%">@item.EventInfo1</td>
+                            <td width="14%">@item.EventInfo2</td>
+                            <td width="14%">@item.EventInfo3</td>
+                            <td width="14%">
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
+                            <td />
+                        </tr>
+
                     }
-         
+                    @foreach (var item in Model.EventList3)
+
+                    {
+                        <tr>
+
+                            <td width="14%">@item.EventId</td>
+                            <td width="14%">@item.CalDate</td>
+                            <td width="14%">@item.EventDyno</td>
+                            <td width="14%">@item.EventInfo1</td>
+                            <td width="14%">@item.EventInfo2</td>
+                            <td width="14%">@item.EventInfo3</td>
+                            <td width="14%">
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
+                            <td />
+                        </tr>
+
+                    }
+
 
                 </table>
             </td>
@@ -83,24 +119,43 @@
                 <table>
 
 
-                    @foreach (var item in Model.EventList2)
+                    @foreach (var item in Model.EventList4)
 
                     {
-            
                         <tr>
 
                             <td width="14%">@item.EventId</td>
                             <td width="14%">@item.CalDate</td>
-                            <td width="14%">@item.EventDyno</td>            
+                            <td width="14%">@item.EventDyno</td>
                             <td width="14%">@item.EventInfo1</td>
                             <td width="14%">@item.EventInfo2</td>
                             <td width="14%">@item.EventInfo3</td>
                             <td width="14%">
-                                    <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
-                                    <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
-                            <td/>
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
+                            <td />
                         </tr>
+
                     }
+                    @foreach (var item in Model.EventList5)
+
+                    {
+                        <tr>
+
+                            <td width="14%">@item.EventId</td>
+                            <td width="14%">@item.CalDate</td>
+                            <td width="14%">@item.EventDyno</td>
+                            <td width="14%">@item.EventInfo1</td>
+                            <td width="14%">@item.EventInfo2</td>
+                            <td width="14%">@item.EventInfo3</td>
+                            <td width="14%">
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Edit?id=@item.EventId">Edit</a>
+                                <a class="btn btn-primary btn-sm" href="/EWOP/Delete?id=@item.EventId">Delete</a>
+                            <td />
+                        </tr>
+
+                    }
+
 
                 </table>
             </td>
@@ -110,7 +165,7 @@
             <td>
                 <table>
 
-                    @foreach (var item in Model.EventList3)
+                    @foreach (var item in Model.EventList6)
 
                     {
                         <tr>
@@ -134,7 +189,7 @@
         <tr>
             <td>
                 <table> 
-                    @foreach (var item in Model.EventList4)
+                    @foreach (var item in Model.EventList7)
 
                     {
             

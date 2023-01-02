@@ -27,48 +27,259 @@
 
     <tbody>
         
-         @for(var week=1; week < 7; week++)
-            {
+        
             <tr>
                 
-                @for (var day = 1; day < 8; day++)
+                @for (var day = 0; day < 7; day++)
                     {
                     <td width="14%">
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <td><h3>
-                                    @day-@week
+                                    @Model.CalMonth0[@day].CalDay
                                     </h3></td>
                                 </tr>
                         
                                 <tr>
                                     <td><h4>
-                                     @day SN
+                                    @Model.CalMonth0[@day].CalDyno
                                     </h4></td>
                                 </tr>
                                 <tr>
                                      <td>
-                                     @day Info 1
-                                     </td>
+                                        @Model.CalMonth0[@day].CalInfo1
+                                    </td>
                                 </tr>
                                 <tr>
                                      <td>
-                                     @day Info 2
-                                     </td>
+                                        @Model.CalMonth0[@day].CalInfo2
+                                    </td>
                                 </tr>
                                 <tr>
                                      <td>
-                                     @day Info 3
-                                     </td>
+                                        @Model.CalMonth0[@day].CalInfo3
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </td>
                 }<!-- For each day-->
-                
+            <tr/>
+            <tr>
+                @for (var day = 7; day < 14; day++)
+                {
+                    <td width="14%">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h3>
+                                            @Model.CalMonth0[@day].CalDay
+                                        </h3>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <h4>
+                                            @Model.CalMonth0[@day].CalDyno
+                                        </h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        @Model.CalMonth0[@day].CalInfo1
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        @Model.CalMonth0[@day].CalInfo2
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        @Model.CalMonth0[@day].CalInfo3
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                }<!-- For each day-->
             </tr>
-        } <!-- For each week-->
+
+        <tr>
+                @for (var day = 14; day < 21; day++)
+                {
+                <td width="14%">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h3>
+                                            @Model.CalMonth0[@day].CalDay
+                                    </h3>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h4>
+                                            @Model.CalMonth0[@day].CalDyno
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        @Model.CalMonth0[@day].CalInfo1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        @Model.CalMonth0[@day].CalInfo2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        @Model.CalMonth0[@day].CalInfo3
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                }<!-- For each day-->
+        </tr>
+
+
+        <tr>
+                @for (var day = 21; day < 28; day++)
+                {
+                <td width="14%">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h3>
+                                            @Model.CalMonth0[@day].CalDay
+                                    </h3>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h4>
+                                            @Model.CalMonth0[@day].CalDyno
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        @Model.CalMonth0[@day].CalInfo1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        @Model.CalMonth0[@day].CalInfo2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        @Model.CalMonth0[@day].CalInfo3
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                }<!-- For each day-->
+        </tr>
+
+
+        <tr>
+                @for (var day = 28; day < 35; day++)
+                {
+                <td width="14%">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h3>
+                                            @Model.CalMonth0[@day].CalDay
+                                    </h3>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h4>
+                                            @Model.CalMonth0[@day].CalDyno
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        @Model.CalMonth0[@day].CalInfo1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        @Model.CalMonth0[@day].CalInfo2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        @Model.CalMonth0[@day].CalInfo3
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                }<!-- For each day-->
+        </tr>
+
+
+        <tr>
+                @for (var day = 35; day < 42; day++)
+                {
+                <td width="14%">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h3>
+                                            @Model.CalMonth0[@day].CalDay
+                                    </h3>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h4>
+                                            @Model.CalMonth0[@day].CalDyno
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        @Model.CalMonth0[@day].CalInfo1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        @Model.CalMonth0[@day].CalInfo2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        @Model.CalMonth0[@day].CalInfo3
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                }<!-- For each day-->
+        </tr>
+
+
     </tbody>
 </table>
 
